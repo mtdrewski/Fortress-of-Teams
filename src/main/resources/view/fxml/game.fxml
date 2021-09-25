@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane prefHeight="768.0" prefWidth="1366.0">
+        <content>
+          <AnchorPane fx:id="MainScrollPane" minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="4167.0">
+               <children>
+                  <ImageView fx:id="mainImageView" fitHeight="750.0" fitWidth="4167.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <AnchorPane prefHeight="200.0" prefWidth="590.0">
+         <children>
+            <Pane opacity="0.6" prefHeight="200.0" prefWidth="590.0" style="-fx-background-color: #8b8b8b;" />
+            <Label fx:id="fortressHPInfo" accessibleRoleDescription="leftFortressFactory.createFortress(" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="590.0" textAlignment="CENTER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="fortressMoneyInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="100.0" prefHeight="100.0" prefWidth="590.0" textAlignment="CENTER">
+               <font>
+                  <Font size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="SettingsButton" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="82.0" prefWidth="77.0" AnchorPane.rightAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="77.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="GamePausePane" layoutX="634.0" layoutY="219.0" prefHeight="500.0" prefWidth="500.0" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Pane layoutY="2.0" prefHeight="468.0" prefWidth="566.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Label fx:id="PaneMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="14.0" prefHeight="100.0" prefWidth="566.0" text="Paused">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ResumeButton" layoutX="158.0" layoutY="134.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="250.0" text="Resume">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="MenuReturnButton" layoutX="158.0" layoutY="299.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="250.0" text="Return to menu">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="BuyUnitsPane" prefHeight="141.0" prefWidth="624.0" visible="false" AnchorPane.bottomAnchor="18.0">
+         <children>
+            <Pane layoutY="43.0" prefHeight="136.0" prefWidth="606.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Button fx:id="BuySoldierUnitButton" layoutX="47.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/soldier.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="BuySniperUnitButton" layoutX="184.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sniper.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="BuyHeavyUnitButton" layoutX="329.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/heavy.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="BuyUnitsReturnButton" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Return">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="StorePane" prefHeight="141.0" prefWidth="624.0" AnchorPane.bottomAnchor="18.0">
+         <children>
+            <Pane layoutY="43.0" prefHeight="136.0" prefWidth="606.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Button fx:id="BuyUnitsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Buy units" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <Button fx:id="UpgradeUnitsButton" layoutX="184.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Upgrade units" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <Button fx:id="UpgradeFortressButton" layoutX="329.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Upgrade fortress" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+                  <Button fx:id="FortressActionButton" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Fortress action" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="UpgradeUnitsPane" prefHeight="141.0" prefWidth="624.0" visible="false" AnchorPane.bottomAnchor="18.0">
+         <children>
+            <Pane layoutY="43.0" prefHeight="136.0" prefWidth="606.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Button fx:id="SoldierUpgradeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="101.0" text="Soldier upgrade " textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="SniperUpgradeButton" layoutX="184.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Sniper upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="HeavyUpgradeButton" layoutX="329.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Heavy upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="UpgradeUnitsReturnButton" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Return">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="UpgradeFortressPane" prefHeight="141.0" prefWidth="624.0" visible="false" AnchorPane.bottomAnchor="18.0">
+         <children>
+            <Pane layoutY="43.0" prefHeight="136.0" prefWidth="714.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Button fx:id="FortressDamageUpgradeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Damage Upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button fx:id="FortressRangeUpgradeButton" layoutX="184.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Range Upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button fx:id="FortressDefenseUpgradeButton" layoutX="322.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Defense Upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button fx:id="FortressIncomeUpgradeButton" layoutX="464.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Income Upgrade" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button fx:id="UpgradeFortressReturnButton" layoutX="600.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Return">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="FortressActionPane" prefHeight="141.0" prefWidth="624.0" visible="false" AnchorPane.bottomAnchor="18.0">
+         <children>
+            <Pane layoutY="43.0" prefHeight="136.0" prefWidth="606.0" style="-fx-background-color: #8b8b8b;">
+               <children>
+                  <Button fx:id="LargeHealButton" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="101.0" text="Large heal " textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="SmallHealButton" layoutX="184.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Small heal" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="FortressActionReturnButton" layoutX="322.0" layoutY="18.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="Return">
+                     <font>
+                        <Font size="22.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <Label fx:id="messageLabel" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
